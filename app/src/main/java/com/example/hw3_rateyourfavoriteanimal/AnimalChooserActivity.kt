@@ -52,14 +52,18 @@ class AnimalChooserActivity : AppCompatActivity() {
     }
 
 
+//    This function first retrieves the shared preferences object and
+//    creates an editor object to modify it. Then loops through each
+//    animal in the listAnimalName array and removes corresponding rating
+//    from the shared preferences.
     fun clearAllRatings(view:View) {
         val AnimalSharedPreferences = getSharedPreferences("AnimalSharedPreferences", MODE_PRIVATE)
         val editor = AnimalSharedPreferences.edit()
         for (animal in listAnimalName) {
             editor.remove(animal)
         }
-        editor.apply()
-        LoadData()
+        editor.apply() // apply changes
+        LoadData()  // update the UI with the new ratings
         Toast.makeText(this, "All ratings have been reset", Toast.LENGTH_SHORT).show()
     }
 
