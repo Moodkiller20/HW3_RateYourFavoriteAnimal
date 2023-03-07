@@ -52,6 +52,19 @@ class AnimalChooserActivity : AppCompatActivity() {
     }
 
 
+    fun clearAllRatings(view:View) {
+        val AnimalSharedPreferences = getSharedPreferences("AnimalSharedPreferences", MODE_PRIVATE)
+        val editor = AnimalSharedPreferences.edit()
+        for (animal in listAnimalName) {
+            editor.remove(animal)
+        }
+        editor.apply()
+        LoadData()
+        Toast.makeText(this, "All ratings have been reset", Toast.LENGTH_SHORT).show()
+    }
+
+
+
 
 
 }
