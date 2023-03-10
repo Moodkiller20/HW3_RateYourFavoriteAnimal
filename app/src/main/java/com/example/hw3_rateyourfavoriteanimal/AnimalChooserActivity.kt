@@ -1,15 +1,11 @@
 package com.example.hw3_rateyourfavoriteanimal
 
 import android.content.Intent
-import android.media.Image
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.widget.ImageButton
-import android.widget.RatingBar
 import android.widget.TextView
 import android.widget.Toast
-import com.google.gson.Gson
 
 class AnimalChooserActivity : AppCompatActivity() {
 
